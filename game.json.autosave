@@ -814,6 +814,24 @@
         "name": "Cross icon blue.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "intro.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "intro.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "thankyou.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "thankyou.jpg",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -822,6 +840,281 @@
   "objectsGroups": [],
   "variables": [],
   "layouts": [
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "LoadingScreen",
+      "name": "LoadingScreen",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.664
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "TitleTempScreen",
+          "width": 0,
+          "x": -152,
+          "y": -77,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "ExploreVersion",
+          "width": 0,
+          "x": 56,
+          "y": 746,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "name": "TitleTempScreen",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "ExploreOffsetHelper",
+              "type": "Explore::ExploreOffsetHelper"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "intro.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ExploreVersion",
+          "tags": "",
+          "type": "Explore::VersionObject",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "property1": "1.10.6"
+          }
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetGameResolutionSize"
+              },
+              "parameters": [
+                "",
+                "Explore::GetResolvedWidth()",
+                "Explore::GetResolvedHeight()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "ExploreVersion",
+                "=",
+                "Explore::getOffSetValY(SceneWindowHeight()-40)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "ExploreVersion",
+                "=",
+                "Explore::getOffSetValX(20)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "TitleTempScreen",
+                "=",
+                "Explore::getOffSetValX(-160)",
+                "=",
+                "Explore::getOffSetValY(-80)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "TitleTempScreen",
+                "\"MoveToNExtScreen\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "TitleTempScreen",
+                "\"MoveToNextScreen\"",
+                "3"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainIntroState\"",
+                "yes"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "ExploreOffsetHelper",
+          "type": "Explore::ExploreOffsetHelper"
+        }
+      ]
+    },
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
@@ -846,7 +1139,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.472
+        "zoomFactor": 0.64
       },
       "objectsGroups": [
         {
@@ -1400,9 +1693,9 @@
           "font": "GothamSSm-Light.otf",
           "characterSize": 32,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -2098,58 +2391,6 @@
           "type": "Tween::TweenBehavior"
         }
       ]
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "LoadingScreen",
-      "name": "LoadingScreen",
-      "oglFOV": 90,
-      "oglZFar": 500,
-      "oglZNear": 1,
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": false,
-        "gridB": 255,
-        "gridG": 180,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridR": 158,
-        "gridWidth": 32,
-        "snap": true,
-        "windowMask": false,
-        "zoomFactor": 1
-      },
-      "objectsGroups": [],
-      "variables": [],
-      "instances": [],
-      "objects": [],
-      "events": [],
-      "layers": [
-        {
-          "name": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
-        }
-      ],
-      "behaviorsSharedData": []
     },
     {
       "b": 209,
@@ -5324,9 +5565,9 @@
           "font": "GothamSSm-Light.otf",
           "characterSize": 32,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -5352,9 +5593,9 @@
           "font": "GothamSSm-Light.otf",
           "characterSize": 30,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -5397,24 +5638,24 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MettreX"
-              },
-              "parameters": [
-                "ExploreVersion",
-                "=",
-                "Explore::getOffSetValX(20)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "SetGameResolutionSize"
               },
               "parameters": [
                 "",
                 "Explore::GetResolvedWidth()",
                 "Explore::GetResolvedHeight()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "ExploreVersion",
+                "=",
+                "Explore::getOffSetValX(20)"
               ],
               "subInstructions": []
             },
@@ -13195,7 +13436,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.688
+        "zoomFactor": 0.544
       },
       "objectsGroups": [],
       "variables": [],
@@ -13620,6 +13861,10 @@
           "variables": [],
           "behaviors": [
             {
+              "name": "ExploreOffsetHelper",
+              "type": "Explore::ExploreOffsetHelper"
+            },
+            {
               "name": "Tween",
               "type": "Tween::TweenBehavior"
             }
@@ -13663,6 +13908,10 @@
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [
+            {
+              "name": "ExploreOffsetHelper",
+              "type": "Explore::ExploreOffsetHelper"
+            },
             {
               "name": "Tween",
               "type": "Tween::TweenBehavior"
@@ -13708,6 +13957,10 @@
           "variables": [],
           "behaviors": [
             {
+              "name": "ExploreOffsetHelper",
+              "type": "Explore::ExploreOffsetHelper"
+            },
+            {
               "name": "Tween",
               "type": "Tween::TweenBehavior"
             }
@@ -13751,6 +14004,10 @@
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [
+            {
+              "name": "ExploreOffsetHelper",
+              "type": "Explore::ExploreOffsetHelper"
+            },
             {
               "name": "Tween",
               "type": "Tween::TweenBehavior"
@@ -13895,9 +14152,9 @@
           "font": "GothamSSm-Light.otf",
           "characterSize": 32,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -15847,9 +16104,9 @@
           "font": "GothamSSm-Light.otf",
           "characterSize": 32,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -15971,9 +16228,9 @@
           "font": "GothamSSm-Light.otf",
           "characterSize": 30,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -16308,7 +16565,7 @@
                 "BlueFace",
                 "OriPosX",
                 "=",
-                "BlueFace.X()"
+                "Explore::getOffSetValX(BlueFace.X())"
               ],
               "subInstructions": []
             },
@@ -16321,7 +16578,7 @@
                 "BlueFace",
                 "OriPosY",
                 "=",
-                "BlueFace.Y()"
+                "Explore::getOffSetValY(BlueFace.Y())"
               ],
               "subInstructions": []
             },
@@ -16334,7 +16591,7 @@
                 "PinkFace",
                 "OriPosX",
                 "=",
-                "PinkFace.X()"
+                "Explore::getOffSetValX(PinkFace.X())"
               ],
               "subInstructions": []
             },
@@ -16347,7 +16604,7 @@
                 "PinkFace",
                 "OriPosY",
                 "=",
-                "PinkFace.Y()"
+                "Explore::getOffSetValY(PinkFace.Y())"
               ],
               "subInstructions": []
             },
@@ -16360,7 +16617,7 @@
                 "RedFace",
                 "OriPosX",
                 "=",
-                "RedFace.X()"
+                "Explore::getOffSetValX(RedFace.X())"
               ],
               "subInstructions": []
             },
@@ -16373,7 +16630,7 @@
                 "RedFace",
                 "OriPosY",
                 "=",
-                "RedFace.Y()"
+                "Explore::getOffSetValY(RedFace.Y())"
               ],
               "subInstructions": []
             },
@@ -16386,7 +16643,7 @@
                 "BrownFace",
                 "OriPosX",
                 "=",
-                "BrownFace.X()"
+                "Explore::getOffSetValX(BrownFace.X())"
               ],
               "subInstructions": []
             },
@@ -16399,7 +16656,7 @@
                 "BrownFace",
                 "OriPosY",
                 "=",
-                "BrownFace.Y()"
+                "Explore::getOffSetValY(BrownFace.Y())"
               ],
               "subInstructions": []
             },
@@ -16447,6 +16704,118 @@
                 "BottomText",
                 "=",
                 "(SceneWindowWidth()/2)-(BottomText.Width()/2)-100"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BlueWithoutFace",
+                "=",
+                "Explore::getOffSetValX(491)",
+                "=",
+                "Explore::getOffSetValY(319)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "PinkWithoutFace",
+                "=",
+                "Explore::getOffSetValX(489)",
+                "=",
+                "Explore::getOffSetValY(163)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BrownWithoutFace",
+                "=",
+                "Explore::getOffSetValX(491)",
+                "=",
+                "Explore::getOffSetValY(408)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "RedWithoutFace",
+                "=",
+                "Explore::getOffSetValX(490)",
+                "=",
+                "Explore::getOffSetValY(232)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "HighLight",
+                "=",
+                "Explore::getOffSetValX(439)",
+                "=",
+                "Explore::getOffSetValY(120)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BottomText",
+                "=",
+                "Explore::getOffSetValX(483)",
+                "=",
+                "Explore::getOffSetValY(576)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "TitleText",
+                "=",
+                "Explore::getOffSetValX(158)",
+                "=",
+                "Explore::getOffSetValY(32)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "NxtBtn",
+                "=",
+                "Explore::getOffSetValX(633)",
+                "=",
+                "Explore::getOffSetValY(973)"
               ],
               "subInstructions": []
             }
@@ -20393,9 +20762,9 @@
           "font": "GothamSSm-Light.otf",
           "characterSize": 32,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -21119,7 +21488,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.472
+        "zoomFactor": 0.52
       },
       "objectsGroups": [
         {
@@ -22595,9 +22964,9 @@
           "font": "GothamSSm-Light.otf",
           "characterSize": 32,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -22623,9 +22992,9 @@
           "font": "GothamSSm-Light.otf",
           "characterSize": 30,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -22692,19 +23061,19 @@
             {
               "type": {
                 "inverted": false,
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": [],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "DepartScene"
               },
               "parameters": [
                 ""
               ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
               "subInstructions": []
             }
           ],
@@ -22782,7 +23151,7 @@
                 "SmallIntestine",
                 "OriPosX",
                 "=",
-                "SmallIntestine.X()"
+                "Explore::getOffSetValX(SmallIntestine.X())"
               ],
               "subInstructions": []
             },
@@ -22795,7 +23164,7 @@
                 "SmallIntestine",
                 "OriPosY",
                 "=",
-                "SmallIntestine.Y()"
+                "Explore::getOffSetValY(SmallIntestine.Y())"
               ],
               "subInstructions": []
             },
@@ -22808,7 +23177,7 @@
                 "Liver",
                 "OriPosX",
                 "=",
-                "Liver.X()"
+                "Explore::getOffSetValX(Liver.X())"
               ],
               "subInstructions": []
             },
@@ -22821,7 +23190,7 @@
                 "Liver",
                 "OriPosY",
                 "=",
-                "Liver.Y()"
+                "Explore::getOffSetValY(Liver.Y())"
               ],
               "subInstructions": []
             },
@@ -22834,7 +23203,7 @@
                 "Stomach",
                 "OriPosX",
                 "=",
-                "Stomach.X()"
+                "Explore::getOffSetValX(Stomach.X())"
               ],
               "subInstructions": []
             },
@@ -22847,7 +23216,7 @@
                 "Stomach",
                 "OriPosY",
                 "=",
-                "Stomach.Y()"
+                "Explore::getOffSetValY(Stomach.Y())"
               ],
               "subInstructions": []
             },
@@ -22860,7 +23229,7 @@
                 "LargeIntestine",
                 "OriPosX",
                 "=",
-                "LargeIntestine.X()"
+                "Explore::getOffSetValX(LargeIntestine.X())"
               ],
               "subInstructions": []
             },
@@ -22873,7 +23242,7 @@
                 "LargeIntestine",
                 "OriPosY",
                 "=",
-                "LargeIntestine.Y()"
+                "Explore::getOffSetValY(LargeIntestine.Y())"
               ],
               "subInstructions": []
             },
@@ -22886,7 +23255,7 @@
                 "Face",
                 "OriPosX",
                 "=",
-                "Face.X()"
+                "Explore::getOffSetValX(Face.X())"
               ],
               "subInstructions": []
             },
@@ -22899,7 +23268,7 @@
                 "Face",
                 "OriPosY",
                 "=",
-                "Face.Y()"
+                "Explore::getOffSetValY(Face.Y())"
               ],
               "subInstructions": []
             },
@@ -22976,20 +23345,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "BGLayer",
-                "=",
-                "Explore::getOffSetValX(-160)",
-                "=",
-                "Explore::getOffSetValY(-80)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "PauseObjectTimer"
               },
               "parameters": [
@@ -23025,12 +23380,232 @@
             {
               "type": {
                 "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "BottomText",
+                "=",
+                "Explore::getOffSetValY(603)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "TextObject::Opacity"
               },
               "parameters": [
                 "BottomText",
                 "=",
                 "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BGLayer",
+                "=",
+                "Explore::getOffSetValX(-160)",
+                "=",
+                "Explore::getOffSetValY(-80)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "TitleText",
+                "=",
+                "Explore::getOffSetValY(32)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "HighLight",
+                "=",
+                "Explore::getOffSetValX(470)",
+                "=",
+                "Explore::getOffSetValY(149)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Box",
+                "=",
+                "Explore::getOffSetValX(499)",
+                "=",
+                "Explore::getOffSetValY(179)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Fullbody",
+                "=",
+                "Explore::getOffSetValX(570)",
+                "=",
+                "Explore::getOffSetValY(195)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "FaceCollider",
+                "=",
+                "Explore::getOffSetValX(611)",
+                "=",
+                "Explore::getOffSetValY(207)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "LiverCollider",
+                "=",
+                "Explore::getOffSetValX(595)",
+                "=",
+                "Explore::getOffSetValY(362)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "StomachCollider",
+                "=",
+                "Explore::getOffSetValX(631)",
+                "=",
+                "Explore::getOffSetValY(360)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "SmallIntestineCollider",
+                "=",
+                "Explore::getOffSetValX(610)",
+                "=",
+                "Explore::getOffSetValY(459)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "LargeIntestineCollider",
+                "=",
+                "Explore::getOffSetValX(589)",
+                "=",
+                "Explore::getOffSetValY(424)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "NextBtn",
+                "=",
+                "Explore::getOffSetValX(897)",
+                "=",
+                "Explore::getOffSetValY(872)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "RetryBtn",
+                "=",
+                "Explore::getOffSetValX(370)",
+                "=",
+                "Explore::getOffSetValY(872)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "SmilingFace",
+                "=",
+                "Explore::getOffSetValX(611)",
+                "=",
+                "Explore::getOffSetValY(444)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "HumanbodySide",
+                "=",
+                "Explore::getOffSetValX(-156)",
+                "=",
+                "Explore::getOffSetValY(-22)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Human",
+                "=",
+                "Explore::getOffSetValX(-156)",
+                "=",
+                "Explore::getOffSetValY(-32)"
               ],
               "subInstructions": []
             }
@@ -24216,7 +24791,7 @@
                     "Tween",
                     "\"SmallIntestineCorrectTween\"",
                     "Explore::getOffSetValX(593)",
-                    "Explore::getOffSetValX(427)",
+                    "Explore::getOffSetValY(427)",
                     "\"easeInOutCubic\"",
                     "200",
                     "no"
@@ -24383,6 +24958,20 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "BGLayer",
+                    "=",
+                    "Explore::getOffSetValX(-160)",
+                    "=",
+                    "Explore::getOffSetValY(-80)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
@@ -24457,7 +25046,7 @@
                     "Tween",
                     "\"LargeIntestineCorrectTween\"",
                     "Explore::getOffSetValX(580)",
-                    "Explore::getOffSetValX(400)",
+                    "Explore::getOffSetValY(400)",
                     "\"easeInOutCubic\"",
                     "200",
                     "no"
@@ -26821,6 +27410,48 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "RetryBtn",
+                    "Tween",
+                    "\"PressNxt\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"FinalCompletionState\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -26880,13 +27511,173 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1
+        "zoomFactor": 0.664
       },
       "objectsGroups": [],
       "variables": [],
-      "instances": [],
-      "objects": [],
-      "events": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "EndTempScreen",
+          "width": 0,
+          "x": -63,
+          "y": -73,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "ExploreVersion",
+          "width": 0,
+          "x": 83,
+          "y": 736,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "name": "EndTempScreen",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "thankyou.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ExploreVersion",
+          "tags": "",
+          "type": "Explore::VersionObject",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "property1": "1.10.6"
+          }
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetGameResolutionSize"
+              },
+              "parameters": [
+                "",
+                "Explore::GetResolvedWidth()",
+                "Explore::GetResolvedHeight()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "ExploreVersion",
+                "=",
+                "Explore::getOffSetValY(SceneWindowHeight()-40)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "ExploreVersion",
+                "=",
+                "Explore::getOffSetValX(20)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "EndTempScreen",
+                "=",
+                "Explore::getOffSetValX(-160)",
+                "=",
+                "Explore::getOffSetValY(-80)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
       "layers": [
         {
           "name": "",
