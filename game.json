@@ -5723,7 +5723,7 @@
                 "=",
                 "Explore::getOffSetValX(-160)",
                 "=",
-                "Explore::getOffSetValX(-80)"
+                "Explore::getOffSetValY(-80)"
               ],
               "subInstructions": []
             },
@@ -5922,7 +5922,7 @@
                 "SadBrown",
                 "OriPosX",
                 "=",
-                "SadBrown.X()"
+                "Explore::getOffSetValX(SadBrown.X())"
               ],
               "subInstructions": []
             },
@@ -5935,7 +5935,7 @@
                 "SadBrown",
                 "OriPosY",
                 "=",
-                "SadBrown.Y()"
+                "Explore::getOffSetValY(SadBrown.Y())"
               ],
               "subInstructions": []
             },
@@ -5948,7 +5948,7 @@
                 "SadBrown_A",
                 "OriPosY",
                 "=",
-                "SadBrown_A.Y()"
+                "Explore::getOffSetValY(SadBrown_A.Y())"
               ],
               "subInstructions": []
             },
@@ -5961,7 +5961,7 @@
                 "SadBrown_A",
                 "OriPosX",
                 "=",
-                "SadBrown_A.X()"
+                "Explore::getOffSetValX(SadBrown_A.X())"
               ],
               "subInstructions": []
             },
@@ -5974,7 +5974,7 @@
                 "SadBlue",
                 "OriPosX",
                 "=",
-                "SadBlue.X()"
+                "Explore::getOffSetValX(SadBlue.X())"
               ],
               "subInstructions": []
             },
@@ -5987,7 +5987,7 @@
                 "SadBlue",
                 "OriPosY",
                 "=",
-                "SadBlue.Y()"
+                "Explore::getOffSetValY(SadBlue.Y())"
               ],
               "subInstructions": []
             },
@@ -6000,7 +6000,7 @@
                 "SadBlue_A",
                 "OriPosX",
                 "=",
-                "SadBlue_A.X()"
+                "Explore::getOffSetValX(SadBlue_A.X())"
               ],
               "subInstructions": []
             },
@@ -6013,7 +6013,7 @@
                 "SadBlue_A",
                 "OriPosY",
                 "=",
-                "SadBlue_A.Y()"
+                "Explore::getOffSetValY(SadBlue_A.Y())"
               ],
               "subInstructions": []
             },
@@ -6026,7 +6026,7 @@
                 "SadPink",
                 "OriPosX",
                 "=",
-                "SadPink.X()"
+                "Explore::getOffSetValX(SadPink.X())"
               ],
               "subInstructions": []
             },
@@ -6039,7 +6039,7 @@
                 "SadPink",
                 "OriPosY",
                 "=",
-                "SadPink.Y()"
+                "Explore::getOffSetValY(SadPink.Y())"
               ],
               "subInstructions": []
             },
@@ -6052,7 +6052,7 @@
                 "SadPink_A",
                 "OriPosX",
                 "=",
-                "SadPink_A.X()"
+                "Explore::getOffSetValX(SadPink_A.X())"
               ],
               "subInstructions": []
             },
@@ -6065,7 +6065,7 @@
                 "SadPink_A",
                 "OriPosY",
                 "=",
-                "SadPink_A.Y()"
+                "Explore::getOffSetValY(SadPink_A.Y())"
               ],
               "subInstructions": []
             },
@@ -6250,6 +6250,30 @@
             {
               "type": {
                 "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "TitleText",
+                "=",
+                "Explore::getOffSetValY(32)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "BottomText",
+                "=",
+                "Explore::getOffSetValY(576)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "Tween::AddObjectPositionXTween"
               },
               "parameters": [
@@ -6300,6 +6324,370 @@
                 "BottomText",
                 "=",
                 "(SceneWindowWidth()/2)-(BottomText.Width()/2)-100"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BrownHolder",
+                "=",
+                "Explore::getOffSetValX(144)",
+                "=",
+                "Explore::getOffSetValY(153)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BlueHolder",
+                "=",
+                "Explore::getOffSetValX(913)",
+                "=",
+                "Explore::getOffSetValY(148)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "PinkHolder",
+                "=",
+                "Explore::getOffSetValX(502)",
+                "=",
+                "Explore::getOffSetValY(353)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "NextBtn",
+                "=",
+                "Explore::getOffSetValX(633)",
+                "=",
+                "Explore::getOffSetValY(971)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "ContinueBtn",
+                "=",
+                "Explore::getOffSetValX(643)",
+                "=",
+                "Explore::getOffSetValY(966)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BrownFace_A",
+                "=",
+                "Explore::getOffSetValX(225)",
+                "=",
+                "Explore::getOffSetValY(180)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BrownFace_B",
+                "=",
+                "Explore::getOffSetValX(304)",
+                "=",
+                "Explore::getOffSetValY(155)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BrownFace",
+                "=",
+                "Explore::getOffSetValX(245)",
+                "=",
+                "Explore::getOffSetValY(220)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BlueFace",
+                "=",
+                "Explore::getOffSetValX(959)",
+                "=",
+                "Explore::getOffSetValY(164)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BlueFace_A",
+                "=",
+                "Explore::getOffSetValX(1019)",
+                "=",
+                "Explore::getOffSetValY(239)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BlueFace_B",
+                "=",
+                "Explore::getOffSetValX(938)",
+                "=",
+                "Explore::getOffSetValY(247)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "PinkFace",
+                "=",
+                "Explore::getOffSetValX(512)",
+                "=",
+                "Explore::getOffSetValY(367)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "PinkFace_A",
+                "=",
+                "Explore::getOffSetValX(577)",
+                "=",
+                "Explore::getOffSetValY(365)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "PinkFace_B",
+                "=",
+                "Explore::getOffSetValX(647)",
+                "=",
+                "Explore::getOffSetValY(366)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Cell1",
+                "=",
+                "Explore::getOffSetValX(147)",
+                "=",
+                "Explore::getOffSetValY(180)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Cell1_A",
+                "=",
+                "Explore::getOffSetValX(229)",
+                "=",
+                "Explore::getOffSetValY(156)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BlueCell",
+                "=",
+                "Explore::getOffSetValX(915)",
+                "=",
+                "Explore::getOffSetValY(230)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BlueCell_A",
+                "=",
+                "Explore::getOffSetValX(995)",
+                "=",
+                "Explore::getOffSetValY(175)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "PinkCell",
+                "=",
+                "Explore::getOffSetValX(572)",
+                "=",
+                "Explore::getOffSetValY(354)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "PinkCell_A",
+                "=",
+                "Explore::getOffSetValX(639)",
+                "=",
+                "Explore::getOffSetValY(355)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BrownTissue",
+                "=",
+                "Explore::getOffSetValX(143)",
+                "=",
+                "Explore::getOffSetValY(154)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "BlueTissue",
+                "=",
+                "Explore::getOffSetValX(913)",
+                "=",
+                "Explore::getOffSetValY(147)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "PinkTissue",
+                "=",
+                "Explore::getOffSetValX(502)",
+                "=",
+                "Explore::getOffSetValY(353)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "HighLight1",
+                "=",
+                "Explore::getOffSetValX(62)",
+                "=",
+                "Explore::getOffSetValY(105)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "HighLight2",
+                "=",
+                "Explore::getOffSetValX(809)",
+                "=",
+                "Explore::getOffSetValY(104)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "HighLight3",
+                "=",
+                "Explore::getOffSetValX(431)",
+                "=",
+                "Explore::getOffSetValY(297)"
               ],
               "subInstructions": []
             }
@@ -6845,9 +7233,221 @@
                     "1"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Draggable",
+                    "Draggable",
+                    "no"
+                  ],
+                  "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "HighLight1",
+                        "StatusFilled",
+                        "!=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HighLight1",
+                            "StatusFilled",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "Cell1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "Cell1_A"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HighLight1",
+                            "StatusFilled",
+                            "=",
+                            "1\n"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "Cell1_A"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "Cell1",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "BrownFace_A",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "=",
+                            "\"Yay! This is where I belong.\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "=",
+                            "(SceneWindowWidth()/2)-(BottomText.Width()/2)-100"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectPositionXTween"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "Tween",
+                            "\"ShowBtmText\"",
+                            "(SceneWindowWidth()/2)-(BottomText.Width()/2)",
+                            "\"easeInOutCubic\"",
+                            "1000",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectOpacityTween"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "Tween",
+                            "\"ShowBtmTextOpa\"",
+                            "255",
+                            "\"easeInOutCubic\"",
+                            "1000",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HighLight1",
+                            "StatusFilled",
+                            "=",
+                            "2\n"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
             },
             {
               "disabled": false,
@@ -6967,672 +7567,20 @@
                     "1"
                   ],
                   "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::And"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MouseButtonReleased"
-                      },
-                      "parameters": [
-                        "",
-                        "Left"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "HighLight2",
-                        "SadBlue",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "SadBlue",
-                    ""
-                  ],
-                  "subInstructions": []
                 },
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarObjet"
+                    "value": "ActivateBehavior"
                   },
                   "parameters": [
-                    "HighLight2",
-                    "StatusFilled",
-                    "+",
-                    "1"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"BottomButtonTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Tween::AddObjectOpacityTween"
-                  },
-                  "parameters": [
-                    "HighLight2",
-                    "Tween",
-                    "\"ShowHighlight2\"",
-                    "255",
-                    "\"easeInOutCubic\"",
-                    "200",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeSprite"
-                  },
-                  "parameters": [
-                    "HighLight2",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PlaySoundCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "Audio\\VO_Split\\19EXPL04SCI03E01_Q2_CF_VO1(P2).mp3",
-                    "10",
-                    "40",
-                    "",
-                    "1"
+                    "Draggable",
+                    "Draggable",
+                    "no"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::And"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MouseButtonReleased"
-                      },
-                      "parameters": [
-                        "",
-                        "Left"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "HighLight2",
-                        "SadBlue_A",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "SadBlue_A",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "HighLight2",
-                    "StatusFilled",
-                    "+",
-                    "1"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"BottomButtonTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Tween::AddObjectOpacityTween"
-                  },
-                  "parameters": [
-                    "HighLight2",
-                    "Tween",
-                    "\"ShowHighlight2\"",
-                    "255",
-                    "\"easeInOutCubic\"",
-                    "200",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeSprite"
-                  },
-                  "parameters": [
-                    "HighLight2",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PlaySoundCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "Audio\\VO_Split\\19EXPL04SCI03E01_Q2_CF_VO1(P2).mp3",
-                    "10",
-                    "40",
-                    "",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::And"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MouseButtonReleased"
-                      },
-                      "parameters": [
-                        "",
-                        "Left"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "HighLight3",
-                        "SadPink",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "HighLight3",
-                    "StatusFilled",
-                    "+",
-                    "1"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "SadPink",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"BottomButtonTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeSprite"
-                  },
-                  "parameters": [
-                    "HighLight3",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Tween::AddObjectOpacityTween"
-                  },
-                  "parameters": [
-                    "HighLight3",
-                    "Tween",
-                    "\"ShowHighlight3\"",
-                    "255",
-                    "\"easeInOutCubic\"",
-                    "200",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PlaySoundCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "Audio\\VO_Split\\19EXPL04SCI03E01_Q2_CF_VO1(P2).mp3",
-                    "10",
-                    "40",
-                    "",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::And"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MouseButtonReleased"
-                      },
-                      "parameters": [
-                        "",
-                        "Left"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "HighLight3",
-                        "SadPink_A",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "HighLight3",
-                    "StatusFilled",
-                    "+",
-                    "1"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "SadPink_A",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"BottomButtonTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Tween::AddObjectOpacityTween"
-                  },
-                  "parameters": [
-                    "HighLight3",
-                    "Tween",
-                    "\"ShowHighlight3\"",
-                    "255",
-                    "\"easeInOutCubic\"",
-                    "200",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeSprite"
-                  },
-                  "parameters": [
-                    "HighLight3",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PlaySoundCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "Audio\\VO_Split\\19EXPL04SCI03E01_Q2_CF_VO1(P2).mp3",
-                    "10",
-                    "40",
-                    "",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Timer"
-              },
-              "parameters": [
-                "",
-                "2",
-                "\"BottomButtonTimer\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SoundStopped"
-              },
-              "parameters": [
-                "",
-                "10"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": [],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Tween::AddObjectOpacityTween"
-              },
-              "parameters": [
-                "HighLight3",
-                "Tween",
-                "\"ShowHighlight3\"",
-                "0",
-                "\"easeInOutCubic\"",
-                "50",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Tween::AddObjectOpacityTween"
-              },
-              "parameters": [
-                "HighLight2",
-                "Tween",
-                "\"ShowHighlight2\"",
-                "0",
-                "\"easeInOutCubic\"",
-                "50",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Tween::AddObjectOpacityTween"
-              },
-              "parameters": [
-                "HighLight1",
-                "Tween",
-                "\"ShowHighlight1\"",
-                "0",
-                "\"easeInOutCubic\"",
-                "50",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Tween::AddObjectPositionXTween"
-              },
-              "parameters": [
-                "BottomText",
-                "Tween",
-                "\"HideBtmText\"",
-                "(SceneWindowWidth()/2)-(BottomText.Width()/2)+100",
-                "\"easeInOutCubic\"",
-                "1000",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Tween::AddObjectOpacityTween"
-              },
-              "parameters": [
-                "BottomText",
-                "Tween",
-                "\"HideBtmTextOpa\"",
-                "0",
-                "\"easeInOutCubic\"",
-                "1000",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "Handle Cell Appearance and Tissue appearance on Completion",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "ContinueBtn",
-                    "Left"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PosY"
-                  },
-                  "parameters": [
-                    "ContinueBtn",
-                    "!=",
-                    "700"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
               "events": [
                 {
                   "disabled": false,
@@ -7931,7 +7879,142 @@
                       "events": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "HighLight2",
+                        "SadBlue",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "SadBlue",
+                    ""
+                  ],
+                  "subInstructions": []
                 },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "HighLight2",
+                    "StatusFilled",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"BottomButtonTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "HighLight2",
+                    "Tween",
+                    "\"ShowHighlight2\"",
+                    "255",
+                    "\"easeInOutCubic\"",
+                    "200",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "HighLight2",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Audio\\VO_Split\\19EXPL04SCI03E01_Q2_CF_VO1(P2).mp3",
+                    "10",
+                    "40",
+                    "",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Draggable",
+                    "Draggable",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
                 {
                   "disabled": false,
                   "folded": false,
@@ -8240,7 +8323,602 @@
                       "events": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "HighLight2",
+                        "SadBlue_A",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "SadBlue_A",
+                    ""
+                  ],
+                  "subInstructions": []
                 },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "HighLight2",
+                    "StatusFilled",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"BottomButtonTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "HighLight2",
+                    "Tween",
+                    "\"ShowHighlight2\"",
+                    "255",
+                    "\"easeInOutCubic\"",
+                    "200",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "HighLight2",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Audio\\VO_Split\\19EXPL04SCI03E01_Q2_CF_VO1(P2).mp3",
+                    "10",
+                    "40",
+                    "",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Draggable",
+                    "Draggable",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "HighLight2",
+                        "StatusFilled",
+                        "!=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HighLight2",
+                            "StatusFilled",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "BlueCell"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "BlueCell_A"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HighLight2",
+                            "StatusFilled",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "BlueCell"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "BlueCell_A",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "BlueFace_A",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "=",
+                            "\"Yay! This is where I belong.\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "=",
+                            "(SceneWindowWidth()/2)-(BottomText.Width()/2)-100"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectPositionXTween"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "Tween",
+                            "\"ShowBtmText\"",
+                            "(SceneWindowWidth()/2)-(BottomText.Width()/2)",
+                            "\"easeInOutCubic\"",
+                            "1000",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectOpacityTween"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "Tween",
+                            "\"ShowBtmTextOpa\"",
+                            "255",
+                            "\"easeInOutCubic\"",
+                            "1000",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HighLight2",
+                            "StatusFilled",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "BlueFace_B",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "BlueTissue",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "BlueCell_A",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "BlueCell",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "HighLight2",
+                            "StatusFilled",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "TissueCompletionState",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "TissueCompletionCounter",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectOpacityTween"
+                          },
+                          "parameters": [
+                            "HighLight2",
+                            "Tween",
+                            "\"ShowHighlight2\"",
+                            "255",
+                            "\"easeInOutCubic\"",
+                            "200",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "Draggable",
+                            "Draggable",
+                            "no"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectOpacityTween"
+                          },
+                          "parameters": [
+                            "BoxNeutral_B",
+                            "Tween",
+                            "\"FadeBox\"",
+                            "0",
+                            "\"easeInOutCubic\"",
+                            "200",
+                            "yes"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "HighLight3",
+                        "SadPink",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "HighLight3",
+                    "StatusFilled",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "SadPink",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"BottomButtonTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "HighLight3",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "HighLight3",
+                    "Tween",
+                    "\"ShowHighlight3\"",
+                    "255",
+                    "\"easeInOutCubic\"",
+                    "200",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Audio\\VO_Split\\19EXPL04SCI03E01_Q2_CF_VO1(P2).mp3",
+                    "10",
+                    "40",
+                    "",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Draggable",
+                    "Draggable",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
                 {
                   "disabled": false,
                   "folded": false,
@@ -8557,8 +9235,873 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "HighLight3",
+                        "SadPink_A",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "HighLight3",
+                    "StatusFilled",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "SadPink_A",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"BottomButtonTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "HighLight3",
+                    "Tween",
+                    "\"ShowHighlight3\"",
+                    "255",
+                    "\"easeInOutCubic\"",
+                    "200",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeSprite"
+                  },
+                  "parameters": [
+                    "HighLight3",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Audio\\VO_Split\\19EXPL04SCI03E01_Q2_CF_VO1(P2).mp3",
+                    "10",
+                    "40",
+                    "",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Draggable",
+                    "Draggable",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "HighLight3",
+                        "StatusFilled",
+                        "!=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HighLight3",
+                            "StatusFilled",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "PinkCell_A"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "PinkCell"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HighLight3",
+                            "StatusFilled",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "PinkCell",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "PinkFace_A",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "=",
+                            "\"Yay! This is where I belong.\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "=",
+                            "(SceneWindowWidth()/2)-(BottomText.Width()/2)-100"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectOpacityTween"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "Tween",
+                            "\"ShowBtmTextOpa\"",
+                            "255",
+                            "\"easeInOutCubic\"",
+                            "1000",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectPositionXTween"
+                          },
+                          "parameters": [
+                            "BottomText",
+                            "Tween",
+                            "\"ShowBtmText\"",
+                            "(SceneWindowWidth()/2)-(BottomText.Width()/2)",
+                            "\"easeInOutCubic\"",
+                            "1000",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HighLight3",
+                            "StatusFilled",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "PinkCell_A",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "PinkFace",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "PinkFace_B",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "PinkFace_A",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "PinkTissue",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "TissueCompletionState",
+                            "=",
+                            "3"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "TissueCompletionCounter",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "HighLight3",
+                            "StatusFilled",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Tween::AddObjectOpacityTween"
+                          },
+                          "parameters": [
+                            "BoxNeutral_C",
+                            "Tween",
+                            "\"FadeBox\"",
+                            "0",
+                            "\"easeInOutCubic\"",
+                            "200",
+                            "yes"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "Draggable",
+                            "Draggable",
+                            "no"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "2",
+                "\"BottomButtonTimer\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SoundStopped"
+              },
+              "parameters": [
+                "",
+                "10"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectOpacityTween"
+              },
+              "parameters": [
+                "HighLight3",
+                "Tween",
+                "\"ShowHighlight3\"",
+                "0",
+                "\"easeInOutCubic\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectOpacityTween"
+              },
+              "parameters": [
+                "HighLight2",
+                "Tween",
+                "\"ShowHighlight2\"",
+                "0",
+                "\"easeInOutCubic\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectOpacityTween"
+              },
+              "parameters": [
+                "HighLight1",
+                "Tween",
+                "\"ShowHighlight1\"",
+                "0",
+                "\"easeInOutCubic\"",
+                "50",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectPositionXTween"
+              },
+              "parameters": [
+                "BottomText",
+                "Tween",
+                "\"HideBtmText\"",
+                "(SceneWindowWidth()/2)-(BottomText.Width()/2)+100",
+                "\"easeInOutCubic\"",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectOpacityTween"
+              },
+              "parameters": [
+                "BottomText",
+                "Tween",
+                "\"HideBtmTextOpa\"",
+                "0",
+                "\"easeInOutCubic\"",
+                "1000",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Draggable",
+                "Draggable",
+                "yes"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Handle Cell Appearance and Tissue appearance on Completion",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "ContinueBtn",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PosY"
+                      },
+                      "parameters": [
+                        "ContinueBtn",
+                        "!=",
+                        "700"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "HighLight1",
+                            "SadBrown",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "HighLight1",
+                            "SadBrown_A",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "HighLight2",
+                            "SadBlue",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "HighLight2",
+                            "SadBlue_A",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "HighLight3",
+                            "SadPink",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "HighLight3",
+                            "SadPink_A",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
               "actions": [],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectTimer"
+                  },
+                  "parameters": [
+                    "HighLight1",
+                    "\"TurnOffTimer\"",
+                    "3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "HighLight1",
+                    "Tween",
+                    "\"HideHighlight1\"",
+                    "0",
+                    "\"easeInOutCubic\"",
+                    "200",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectTimer"
+                  },
+                  "parameters": [
+                    "HighLight2",
+                    "\"TurnOffTimer\"",
+                    "3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "HighLight2",
+                    "Tween",
+                    "\"HideHighlight2\"",
+                    "0",
+                    "\"easeInOutCubic\"",
+                    "200",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectTimer"
+                  },
+                  "parameters": [
+                    "HighLight3",
+                    "\"TurnOffTimer\"",
+                    "3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "HighLight3",
+                    "Tween",
+                    "\"HideHighlight3\"",
+                    "0",
+                    "\"easeInOutCubic\"",
+                    "200",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "events": []
             }
           ],
@@ -9981,7 +11524,7 @@
                         "value": "CollisionNP"
                       },
                       "parameters": [
-                        "HighLight2",
+                        "BlueHolder",
                         "SadBlue_A",
                         "",
                         "",
@@ -10440,7 +11983,7 @@
                         "value": "CollisionNP"
                       },
                       "parameters": [
-                        "HighLight3",
+                        "PinkHolder",
                         "SadPink",
                         "",
                         "",
@@ -10899,7 +12442,7 @@
                         "value": "CollisionNP"
                       },
                       "parameters": [
-                        "HighLight3",
+                        "PinkHolder",
                         "SadPink_A",
                         "",
                         "",
